@@ -11,7 +11,8 @@ header {
     margin: 0 5%;
 }
 
-.logo {
+.logo,
+.logo-footer {
     display: flex;
     justify-content: center;
     gap: 10px;
@@ -19,7 +20,7 @@ header {
 }
 
 .logo-img {
-    width: 15%;
+    width: 50px;
     flex-shrink: 0;
 }
 
@@ -47,42 +48,76 @@ header {
 
 }
 
+.services {
+    padding: 0 6wv;
+}
+
 .devis-button,
-.services-button  {
+.services-button {
     text-decoration: none;
-    display: inline-flex;
+    display: block;
     width: 200px;
     height: 50px;
     font-size: 15px;
     font-weight: 600;
     border-radius: 10px;
-  
     display: flex;
     justify-content: center;
     align-items: center;
- 
-}
-.devis-button{
-      background-color: #FF6418;
-         color: #FFFFFF;
 }
 
-.menu-toggle {
+.devis-button {
+    background-color: #FF6418;
+    color: #FFFFFF;
+}
+
+.burger-button {
+    background-color: #FFFFFF;
+    color: black;
+    padding: 16px;
+    font-size: 16px;
+    border: none;
+    cursor: pointer;
+    font-size: 30px;
+}
+
+.burger-menu {
+    /*display: none;*/
+
+}
+
+.burger-menu-content {
     display: none;
+    position: absolute;
+    background-color: #102A43;
+    width: 100vw;
+    left: 0%;
+    text-align: center;
+   
+
 }
 
-@media (max-width: 576px) {
-    .header-midlle>nav {
-        flex-direction: row;
-    }
+.burger-menu-content a {
+    color: #e94E16;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+}
 
+.burger-menu-contenta:hover {
+    background-color: #f1f1f1;
+}
+
+.burger-menu:hover .burger-menu-content {
+    display: block;
 }
 
 .hero {
     background-color: #F4F7FA;
-    padding: 50px 7%;
+    padding: 50px 6vw;
     color: #192F46;
 }
+
 .hero-section {
     display: grid;
     grid-template-columns: 1fr 1fr;
@@ -90,6 +125,7 @@ header {
     gap: 60px;
     margin: 0 auto;
 }
+
 .localisation {
     display: flex;
     align-items: center;
@@ -99,32 +135,39 @@ header {
     font-weight: 600;
     margin: 0 0 25px;
 }
+
 .localisation img {
     width: 16px;
     height: 16px;
 }
+
 .hero-title {
     font-size: clamp(36px, 4vw, 56px);
     font-weight: 800;
     letter-spacing: -1.5px;
-    margin: 0 0 25px;
+
     color: #192F46;
 }
 
- .devis-button:hover {
+.devis-button:hover {
     background-color: #e94E16;
 }
+
 .services-button {
+    margin-top: -15px;
     background-color: white;
     color: #192F46;
     border: 1px solid #D6E1EA;
 }
+
 .services-button:hover {
     background-color: #EAF1F7;
 }
+
 .hero-image {
     width: 100%;
 }
+
 .hero-image img {
     display: block;
     width: 100%;
@@ -132,6 +175,7 @@ header {
     object-fit: cover;
     border-radius: 24px;
 }
+
 .engagements {
     margin: 48px auto 0;
     padding-top: 26px;
@@ -142,6 +186,7 @@ header {
     align-items: center;
     gap: 20px;
 }
+
 .engagements p {
     display: flex;
     align-items: center;
@@ -151,6 +196,7 @@ header {
     font-weight: 600;
     white-space: nowrap;
 }
+
 .engagements img {
     width: 38px;
     height: 38px;
@@ -159,15 +205,205 @@ header {
     background-color: #E4F0FC;
     border-radius: 50%;
 }
-.hero-buttons{
+
+.hero-buttons {
     display: flex;
     justify-content: center;
     align-items: center;
     gap: 20Px;
     margin-top: 10%;
 }
-.services{
+
+.services {
     display: flex;
     flex-direction: column;
     justify-content: center;
+    align-items: center;
+
+
+}
+
+.services-nos,
+.choisir-content-p {
+    color: #0866C2;
+    font-size: 15px;
+    font-weight: 800;
+}
+
+.services-title,
+.choisir-content-title {
+    color: #102A43;
+    font-size: 40px;
+    font-weight: 700;
+}
+
+.service-slogon,
+.service p,
+.choisir p {
+    color: #486176;
+    font-size: 20px;
+    font-weight: 400;
+}
+
+.choisir h4 {
+    font-size: 20px;
+    font-weight: 800;
+
+}
+
+.services-solutions {
+    display: flex;
+    align-items: center;
+    margin: 5%;
+    gap: 30px;
+}
+
+.img1,
+.img2,
+.img3 {
+    width: 28vw;
+    border-radius: 5%;
+}
+
+.service {
+    display: flex;
+    flex-direction: column;
+    border: 1px solid #DCE5EC;
+    border-radius: 5%;
+}
+
+.icon {
+    margin-top: 2vh;
+    width: 50px;
+    height: 50px;
+    padding: 9px;
+    box-sizing: border-box;
+    background-color: #E4F0FC;
+    border-radius: 25%;
+}
+
+.service h2 {
+    color: #102A43;
+    font-size: 25px;
+    font-weight: 700;
+}
+
+.choisir {
+    background-color: #F3F7FA;
+    display: flex;
+    justify-content: space-between;
+    margin-top: 25px;
+    padding: 65px 6vw;
+}
+
+.choisir-img img {
+    display: block;
+    height: 40vw;
+    object-fit: cover;
+    border-radius: 24px;
+    padding-right: 6vw;
+}
+
+.advanteges {
+    display: grid;
+    grid-template-columns: auto auto;
+}
+
+.choisir-content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.advanteges img {
+    width: 38px;
+    height: 38px;
+    padding: 9px;
+    box-sizing: border-box;
+    background-color: #E4F0FC;
+    border-radius: 50%;
+}
+
+.advanteges h4 {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+footer {
+    background-color: #102A43;
+    color: #FFFFFF;
+    text-decoration: none;
+}
+
+.footer-section {
+    display: grid;
+    grid-template-columns: 2fr 1fr 1fr 1fr;
+    gap: 50px;
+
+}
+
+footer {
+    padding: 20px 6vw;
+    color: #FFFFFF;
+    font-size: 18px;
+    font-weight: 400;
+}
+
+.footer-logo-section,
+.footer-midlle-first,
+.footer-services,
+.footer-contact {
+    display: flex;
+    flex-direction: column;
+    justify-content: right;
+    align-items: flex-start;
+}
+
+footer a {
+    text-decoration: none;
+    color: #FFFFFF;
+}
+
+footer a :hover {
+    color: #e94E16;
+}
+
+.footer-services,
+.footer-contact,
+.footer-liens {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.footer-logo-section .icon {
+    font-size: 40px;
+    background-color: #102A43;
+    border: 0.5px solid #F4F7FA;
+}
+
+.footer-contact .icon {
+    font-size: 20px;
+    background-color: #102A43;
+
+}
+
+.footer-underline {
+    border-top: 1px solid #FFFFFF;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.footer-underline p {
+    font-size: 15px;
+}
+
+.legal {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+
+
 }
