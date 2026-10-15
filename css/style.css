@@ -1,6 +1,7 @@
 body {
     width: 100%;
     margin: 0;
+    font-family: inter;
 }
 
 header {
@@ -11,17 +12,17 @@ header {
     margin: 0 5%;
 }
 
-.logo,
+.logo-section,
 .logo-footer {
     display: flex;
     justify-content: center;
     gap: 10px;
-    flex-shrink: 0;
+
 }
 
 .logo-img {
     width: 50px;
-    flex-shrink: 0;
+
 }
 
 .plomb {
@@ -37,9 +38,11 @@ header {
 }
 
 .header-midlle>nav {
-    gap: 40%;
     display: flex;
     align-items: center;
+    width: 25vw;
+    justify-content: space-between;
+
 }
 
 .header-midlle>nav a {
@@ -82,7 +85,7 @@ header {
 }
 
 .burger-menu {
-    /*display: none;*/
+    display: none;
 
 }
 
@@ -93,7 +96,7 @@ header {
     width: 100vw;
     left: 0%;
     text-align: center;
-   
+
 
 }
 
@@ -209,9 +212,10 @@ header {
 .hero-buttons {
     display: flex;
     justify-content: center;
-    align-items: center;
-    gap: 20Px;
-    margin-top: 10%;
+    align-items: baseline;
+    gap: 20px;
+    margin: 8vw 0;
+    flex-wrap: wrap;
 }
 
 .services {
@@ -299,9 +303,11 @@ header {
 .choisir-img img {
     display: block;
     height: 40vw;
+    height: 40vh;
     object-fit: cover;
     border-radius: 24px;
     padding-right: 6vw;
+    border-radius: 15%;
 }
 
 .advanteges {
@@ -404,6 +410,76 @@ footer a :hover {
     display: flex;
     align-items: center;
     gap: 20px;
+
+
+}
+
+@media (width <=768px) {
+    .header-midlle {
+        display: none;
+    }
+
+    .burger-menu {
+        display: block;
+    }
+
+    header {
+        display: flex;
+        flex-wrap: wrap;
+    }
+
+    .logo {
+        width: 100vw;
+        display: flex;
+        justify-content: space-between;
+    }
+.logo h1{
+
+    
+}
+    .hero {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .hero-section {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .hero-left,
+    .devis-button,
+    .services-button,
+    .hero-image {
+        width: 90vw;
+    }
+
+    .engagements {
+        display: flex;
+        flex-direction: column;
+        align-items: start;
+    }
+
+    .services,
+    .services-solutions,
+    .choisir,
+    .advanteges,
+    .footer-section,
+    .footer-underline {
+        margin: 0;
+        display: flex;
+        flex-direction: column;
+        padding: 3vw;
+    }
+
+    .service {
+        padding: 0 2vw;
+    }
+
+    .img1,
+    .choisir-img img {
+        width: 90vw;
+    }
 
 
 }
